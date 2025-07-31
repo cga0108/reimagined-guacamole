@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | FAQ accordion</title>
+ 
+  <link rel="stylesheet" href="styles.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+</head>
+<body>
+  <div class="center">
+      <img src="./assets/images/background-pattern-desktop.svg" alt="">
+  </div>
+
+  <div class="faq-container">
+   <img src="./assets/images/icon-star.svg" alt="" width="40px;" height="40px;">
+   <h1>FAQs</h1>
+
+    <details>
+    <summary>What is frontend mentor, and how will it help me?</summary>
+    <p>Frontend mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and Javascript. Its suitable for all levels and ideal for portfolio building.</p>
+  </details>
+  <hr>
+
+  <details>
+    <summary>Is frontend mentor free?</summary>
+    <p>No prior coding experience is required. We start from the basics and build up.</p>
+  </details>
+  <hr>
+
+  <details>
+    <summary>Can I use Frontend Mentor projects in my portfolio.</summary>
+    <p>You can email us at support@example.com for any inquiries or assistance.</p>
+  </details>
+  <hr>
+
+  <details>
+    <summary>How can I get help if I'm stuck on a challenge.</summary>
+    <p>You can email us at support@example.com for any inquiries or assistance.</p>
+  </details>
+  <hr>
+
+   <script>
+    const faqs = document.querySelectorAll(".faq-container details");
+
+    faqs.forEach((detail) => {
+      detail.addEventListener("toggle", () => {
+        if (detail.open) {
+          faqs.forEach((otherDetail) => {
+            if (otherDetail !== detail) {
+              otherDetail.removeAttribute("open");
+            }
+          });
+        }
+      });
+    });
+  </script>
+
+
+  </div>
+
+   
+
+
+  
+
+</body>
+</html>

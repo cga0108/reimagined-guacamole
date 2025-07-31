@@ -1,0 +1,93 @@
+body {
+    background-color: hsl(275, 100%, 97%);
+     margin: 0;
+    height: 100vh; /* full viewport height */
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center; 
+    font-family: 'Work Sans', sans-serif;    /* vertical center */
+}
+
+.center {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  text-align: left;
+  position: relative; /* or absolute/fixed */
+  z-index: 10;
+  border-radius: 8px;
+    
+}
+
+.flex {
+  display: flex;
+  font-size: 50px;
+  margin-left: 25px;
+  margin-top: -10px;
+}
+
+
+ summary {
+      font-weight: bold;
+      cursor: pointer;
+      list-style: none;
+      position: relative;
+      padding-right: 40px;
+    }
+
+    /* Hide default marker */
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    /* Toggle circle with + or - */
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background-color: #ccc;
+      border-radius: 50%;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      background-color: purple;
+    }
+
+    /* When open, show − and change color */
+    details[open] summary::after {
+      content: "−";
+      background-color: #333;
+    }
+
+    details[open] {
+      background-color: white;
+    }
+
+    h1 {
+      display: flex;
+      margin-top: -50px;
+      margin-left: 50px;
+    }
+
+
+
